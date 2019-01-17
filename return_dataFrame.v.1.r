@@ -1,7 +1,7 @@
 # This is a general format for creating a data.frame returning function that can accept any number of named arguments
 ### CAUTION: As this will silently recycle arguments as required to match the longest vector passed
 ### NOTE: This depends upon my general stopError() function, which is really a special use of error()
-return_dataFrame <- function(...,func_sepString = ref_sepString){
+return_dataFrame <- function(...,func_sepString = "__;__"){
 	# We want the formal arguments and those supplied. 
 	# This uses the match.call() to find the called expression, and we suppress the 
 	# first value returned which would be the call name itself
